@@ -72,6 +72,24 @@ Data Aggregator is a backend application designed to manage user data with CRUD 
 
    The tests will run using Mocha and Chai.
 
+## Debugging
+
+This project includes debug configurations for Visual Studio Code.
+
+### Debugging the Application
+
+1. Open the project in Visual Studio Code.
+2. Go to the Debug panel (or press `Ctrl+Shift+D`).
+3. Select "Launch Program" from the dropdown menu.
+4. Click the green play button to start debugging.
+
+### Running Tests with Debugging
+
+1. Open the project in Visual Studio Code.
+2. Go to the Debug panel (or press `Ctrl+Shift+D`).
+3. Select "Mocha Tests" from the dropdown menu.
+4. Click the green play button to start debugging the tests.
+
 ## Project Structure
 
 data-aggregator/
