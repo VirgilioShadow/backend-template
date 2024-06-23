@@ -1,0 +1,30 @@
+{
+  "name": "data-aggregator",
+  "version": "1.0.0",
+  "description": "A multi purpose backend with monolithic archecture",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VirgilioShadow/data-aggregator.git"
+  },
+  "author": "Paul M Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VirgilioShadow/data-aggregator/issues"
+  },
+  "homepage": "https://github.com/VirgilioShadow/data-aggregator#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": "^20.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
