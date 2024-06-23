@@ -92,6 +92,7 @@ This project includes debug configurations for Visual Studio Code.
 
 ## Project Structure
 
+```bash
 data-aggregator/
 ├── config/
 │ └── config.js
@@ -109,6 +110,7 @@ data-aggregator/
 ├── app.js
 ├── package.json
 └── README.md
+```
 
 ## Contributing
 
