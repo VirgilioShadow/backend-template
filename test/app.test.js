@@ -1,16 +1,27 @@
-const request = require("supertest");
-const express = require("express");
+import { expect } from "chai";
+import request from "supertest";
+import express from "express";
+import { sequelize } from "../models/index.js";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.json({ msg: "ok" });
+});
+
+before(async () => {
+  await sequelize.sync({ force: true });
+});
+
+after(async () => {
+  await sequelize.close();
 });
 
 describe("GET /", () => {
-  it("should respond with Hello World!", async () => {
+  it('should respond with a JSON object containing msg: "ok"', async () => {
     const response = await request(app).get("/");
-    expect(response.statusCode).toBe(200);
-    expect(response.text).toBe("Hello World!");
+    // console.log(response);
+    expect(response.status).to.equal(200);
+    expect(response.body).to.deep.equal({ msg: "ok" });
   });
 });

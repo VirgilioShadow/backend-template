@@ -1,22 +1,15 @@
 {
-  "name": "data-aggregator",
-  "version": "1.0.0",
-  "description": "A multi purpose backend with monolithic archecture",
-  "main": "index.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VirgilioShadow/data-aggregator.git"
-  },
   "author": "Paul M Gonzalez",
+  "version": "1.0.0",
+  "name": "data-aggregator",
+  "description": "A multi purpose backend with monolithic architecture",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/VirgilioShadow/data-aggregator/issues"
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules app.js",
+    "test": "mocha --require esm \"test/**/*.test.js\""
   },
-  "homepage": "https://github.com/VirgilioShadow/data-aggregator#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -24,11 +17,21 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.3"
   },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "chai": "^5.1.1",
+    "esm": "^3.2.25",
+    "supertest": "^7.0.0"
+  },
   "engines": {
     "node": "^20.0.0"
   },
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "supertest": "^7.0.0"
+  "bugs": {
+    "url": "https://github.com/VirgilioShadow/data-aggregator/issues"
+  },
+  "homepage": "https://github.com/VirgilioShadow/data-aggregator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VirgilioShadow/data-aggregator.git"
   }
 }
